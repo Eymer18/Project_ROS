@@ -4,11 +4,11 @@ _Toda la documentación en la que se basa este proyecto se encuentra en la pági
 
 ## Estructura - Nodos en Linux
 
-Los 9 nodos de este proyecto envian, reciben y procesan información, cada script de los nodos cuenta con sus comentarios donde se explica el funcionamiento de cada uno. De esta manera solo presentare la aqui la ejecución de los nodos mediante terminal.  
+Los 9 nodos de este proyecto envian, reciben y procesan información, cada script de los nodos cuenta con sus comentarios donde se explica el funcionamiento de cada uno. De esta manera solo presentare aquí la ejecución de los nodos mediante terminal.  
 
 ### Ejecucion
 
-_1)Para ejecutar el codigo se debe en el terminal ejecutar de la suguiente manera_
+_1)Para ejecutar el codigo se debe en el terminal ejecutar de la siguiente manera_
 
 * En el primer terminal se ejecuta roscore
 ```
@@ -32,8 +32,6 @@ Para ejecutar el nodo de Arduino, es necesario dar permisos al puerto de entrada
 
 _1) Una vez esta el codigo listo se debe ejecutar las siguientes sentencias en el terminal_
 ```
-ls -l /dev | grep ACM # se revisa que hay conectado a los puertos
-
 sudo chmod 777 /dev/ttyACM0 # se le dan los permisos al puerto (El cero puede cambiar esta informacion la entrega la sentencia anterior)
 ```
 
