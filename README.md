@@ -26,7 +26,7 @@ rqt_graph
 ```
 
 
-## Ejecución Nodo Arduino
+### Ejecución Nodo Arduino
 
 Para ejecutar el nodo de Arduino, es necesario dar permisos al puerto de entrada de la tarjeta, para ello se hace lo siguiente:
 
