@@ -1,4 +1,4 @@
-# Project_ROS
+# ROS_Project_Publishers-Suscribers
 
 _Toda la documentación en la que se basa este proyecto se encuentra en la página web de ROS. En este proyecto se realiza la conexion de 8 nodos en los cuales se envian diferentes tipos de datos entre ellos y posteriormente se genere envio y recepcion de datos desde un Arduino Uno (9 nodos en total incluyendo el de arduino). Recomiendo instalar previamente Arduino y el nodo serial arduino ros para poder trabajar adecuadamente_
 
