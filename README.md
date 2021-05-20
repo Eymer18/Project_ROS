@@ -4,7 +4,30 @@ _Toda la documentación en la que se basa este proyecto se encuentra en la pági
 
 ## Estructura - Nodos en Linux
 
-Los 9 nodos de este proyecto envian, reciben y procesan información, cada script de los nodos cuenta con sus comentarios donde se explica el funcionamiento de cada uno. De esta manera solo presentare aquí la ejecución de los nodos mediante terminal.  
+Los 9 nodos de este proyecto envian, reciben y procesan información, cada script de los nodos cuenta con sus comentarios donde se explica el funcionamiento de cada uno. De esta manera solo presentare aquí una breve descripción de cada nodo y la ejecución de los nodos mediante terminal.
+
+El paquete contiene nodos ROS de la A a la H que publican y suscriben diferentes tipos de variables, incluidas Bool, Int16, FLoat32, Char y String. Finalmente, hay un Nodo con comunicación serial entre ROS y Ardunio para implementación en el mundo real.
+
+(H -> ARDUINO, ARDUINO -> A), estos nodos ROS están destinados a utilizar un controlador de lógica difusa para considerar 3 señales y tomar una decisión para un actuador final.
+
+* Nodo A: Este nodo se suscribe a un topic string del nodo de Arduino y divide la cadena recibida según el sensor. Publica cada valor en un topic diferente: Bool, Int16 y Float32.
+
+* Nodo B: Este nodo se suscribe a un topic Bool del Nodo A, calcula el nivel bajo/medio/alto mediante una logica semidifusa. Publica un String que contiene cada uno de los valores calculados.
+
+* Nodo C: Este nodo se suscribe a un topic Int del Nodo A, calcula el nivel bajo/medio/alto mediante una logica semidifusa. Publica un String que contiene cada uno de los valores calculados.
+
+* Nodo D: Este nodo se suscribe a un topic Float del Nodo A, calcula el nivel bajo/medio/alto mediante una logica semidifusa. Publica un String que contiene cada uno de los valores calculados.
+
+* Nodo E: Este nodo se suscribe a un topic String del Nodo B, extrae el nivel bajo/medio/alto y compara sus valores mediante una logica semidifusa. Finalmente, publica un carácter mediante string con la letra de mayor valor.
+
+* Nodo F: Este nodo se suscribe a un topic String del Nodo C, extrae el nivel bajo/medio/alto y compara sus valores mediante una logica semidifusa. Finalmente, publica un carácter mediante string con la letra de mayor valor.
+
+* Nodo G: Este nodo se suscribe a un topic String del Nodo D, extrae el nivel bajo/medio/alto y compara sus valores mediante una logica semidifusa. Finalmente, publica un carácter mediante string con la letra de mayor valor.
+
+* Nodo H: Este nodo se suscribe a un topic String de los Nodos E, F y G, recibe las letras según cada nodo y realiza una logica semidifusa tomando una decisión según corresponda para el actuador final. Finalmente, publica un string de un solo caracter que contiene la desición.
+
+* Nodo Arduino: Este nodo se suscribe a un topic String del Nodo H, usa el valor para configurar una posición del servomotor, también toma el valor de 3 sensores y publica un String con el valor de los sensores.
+
 
 ### Ejecucion
 
