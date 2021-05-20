@@ -1,4 +1,4 @@
-# ROS_Project_Publishers-Suscribers
+# ROS_Project_Publishers-Subscribers
 
 _All the documentation on which this project is based can be found on the ROS website. In this project, the connection of 8 nodes is made in which different types of data are sent between them and subsequently sending and receiving data is generated from an Arduino Uno (9 nodes in total including the one from Arduino). I recommend previously installing Arduino and the arduino ros serial node to be able to work properly_
 
